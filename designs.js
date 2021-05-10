@@ -16,14 +16,18 @@ function makeGrid(gridEvent) {
 
         const row = canvas.insertRow(y);
         for (let x = 0; x < cells; x++) {
+
             const cell = row.insertCell(x);
+
         }
 
     }
  
     // Pick the current color to be use on the canvas
-    canvas.addEventListener('click', function (canvasEvent) {
+    canvas.addEventListener("click", function (canvasEvent) {
+
         canvasEvent.target.style.backgroundColor = document.getElementById("colorPicker").value;
+        
     })
 
     // Clear canvas
@@ -36,7 +40,9 @@ function makeGrid(gridEvent) {
         for (let y = 0; y < rows; y++) {
 
             for (let x = 0; x < cells; x++) {
+
                 canvas.rows[y].cells[x].style.backgroundColor = "white";
+
             }
 
         }
